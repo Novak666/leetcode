@@ -14,9 +14,8 @@ public:
             return true;
         stack<TreeNode*> S1, S2;
         TreeNode *p, *q;
-        if(root->left) S1.push(root->left);
-        if(root->right) S2.push(root->right);
-        if(S1.size() != S2.size()) return false;
+        S1.push(root);
+        S2.push(root);
         while(!S1.empty() && !S2.empty()){
             p = S1.top(); q = S2.top();
             S1.pop(); S2.pop();
