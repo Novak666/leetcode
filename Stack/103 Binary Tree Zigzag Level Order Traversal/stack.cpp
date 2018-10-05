@@ -16,8 +16,7 @@ public:
     vector<vector<int>> zigzagLevelOrder(TreeNode* root) {
         int h = height(root);
         vector<vector<int>> V(h);
-        stack<pair<TreeNode*, int>> S1;
-        stack<pair<TreeNode*, int>> S2;
+        stack<pair<TreeNode*, int>> S1, S2;
         S1.push({root, 0});
         int level = 0;
         TreeNode* p = NULL;
