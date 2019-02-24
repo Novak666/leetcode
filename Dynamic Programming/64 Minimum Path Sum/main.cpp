@@ -16,9 +16,9 @@ public:
         for(j = 1; j < n; j++)
             num[0][j] = grid[0][j] + num[0][j-1];
         for(i = 1; i < m; i++)
-            for(j = 1; j < n; j++){
+            for(j = 1; j < n; j++)
                 num[i][j] = min(grid[i][j] + num[i][j-1], grid[i][j] + num[i-1][j]);
-            }
+
         return num[m-1][n-1];
     }
 };
